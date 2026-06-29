@@ -5,9 +5,9 @@
       <img [src]="imageSignal().src" [alt]="imageSignal().alt" />
       <!--      String Interpolation-->
       <h2>{{ titleSignal() }}</h2>
-      <!--      If we do not use Content Project, any element that is written inside the opening and closing tag of this component will not show -->
-      <!--      Content Projection - A concept of using ng-content as a placeholder for the wrapped content-->
-      <ng-content />
     </header>
+    <!--      If we do not use Content Project, any element that is written inside the opening and closing tag of this component will not show -->
+    <!--      Content Projection - A concept of using ng-content as a placeholder for the wrapped content-->
+    <ng-content />
   </article>
 </div>
