@@ -1,10 +1,14 @@
 <app-header />
 <main>
   <div id="dashboard">
+    <!--    We are able to assign a value to the 'titleSignal' atribu-->
     <app-dashboard-item
       [imageSignal]="{ src: 'status.png', alt: 'Signal symbol' }"
-      [titleSignal]="'Server Status'"
+      titleSignal="Server Status"
     >
+      <!--      If we do not use Content Project, any element that is written inside the opening and closing tag of this component will not show -->
+      <!--      Content Projection - A concept of using ng-content as a placeholder for the wrapped content-->
+      <!--      We apply Content Project in 'app-dashboard-item' template, where 'app-server-status' is supposed to show-->
       <app-server-status />
     </app-dashboard-item>
 
