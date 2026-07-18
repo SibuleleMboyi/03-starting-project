@@ -7,14 +7,11 @@ import { Component, HostBinding, HostListener, input, ViewEncapsulation } from '
   templateUrl: './control.component.html',
   styleUrl: './control.component.css',
   encapsulation: ViewEncapsulation.None,
-  host: {
-    class: 'control',
-  },
+  // host: {
+  //   class: 'control',
+  // },
 })
 export class ControlComponent {
+  @HostBinding('class') className = 'control';
   public label = input.required<string>();
-
-  @HostListener('click') onClick() {
-    console.log('Clicked!');
-  }
 }
