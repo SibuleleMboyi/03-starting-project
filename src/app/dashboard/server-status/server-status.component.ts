@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './server-status.component.html',
   styleUrl: './server-status.component.css',
+  host: {
+    class: 'status',
+  },
 })
 export class ServerStatusComponent {
   public currentStatus = 'online';
