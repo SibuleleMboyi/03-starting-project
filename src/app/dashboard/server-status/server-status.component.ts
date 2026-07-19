@@ -11,5 +11,18 @@ import { Component } from '@angular/core';
   },
 })
 export class ServerStatusComponent {
-  public currentStatus = 'online';
+  public currentStatus: 'online' | 'unknown' | 'offline' = 'offline';
+
+  constructor() {
+    const rnd = Math.random();
+    setInterval(() => {
+      if (rnd < 0.5) {
+        this.currentStatus = 'online';
+      } else if (rnd < 0.9) {
+        this.currentStatus = 'offline';
+      } else {
+        this.currentStatus = 'unknown';
+      }
+    }, 5000);
+  }
 }
