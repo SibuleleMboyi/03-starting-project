@@ -9,4 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   // @Input()
+
+  public greet() {
+    console.log("I am a button element!");
+  }
 }
